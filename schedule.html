@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="CJ Patoilo">
         <meta name="description" content="Milligram provides a minimal setup of styles for a fast and clean starting point. Specially designed for better performance and higher productivity with fewer properties to reset resulting in cleaner code.">
-        <title>Quick Careers - Training Portal</title>
+        <title>Quick Careers - Schedule Certification Test</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
         <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
         <link rel="stylesheet" href="node_modules/milligram/dist/milligram.css"><!-- to generate this style run `$ npm start` -->
@@ -31,24 +31,38 @@
         <section class="mainContainer">
              <div class="row">
                 <div class="column column-10"></div>
-                <div class="column column-80"><h2>Training Portal: English Proofreading</h2></div>
-                <div class="column column-10"></div>
-            </div>
-
-            <div class="row">
-                <div class="column column-10"></div>
                 <div class="column column-80">
-                    Prepare for your English proofreading certification by completing this portal. Star items you want to bookmark to study later so you can always resume progress later.
-                    <iframe src="https://quizlet.com/281183293/flashcards/embed" height="500" width="100%" style="border:0"></iframe>
+                    <h2>Schedule a Certification Test</h2>
+                    <h4>We're so happy you're ready to get certified! Please fill out the following information to schedule your certification test. Most shelters offer exams from 8AM to 8PM. </h4>
+                    <h3>Location (your shelter):</h3><p id="loc"></p>
+                    <form id="test">
+                        <fieldset>
+                            <label for="subField">Subject</label>
+                                <select id="subField">
+                                  <option value="esl">ESL Tutoring</option>
+                                  <option value="resume">English Proofreading</option>
+                                  <option value="math">Elementary Math</option>
+                                </select>
+                            <label for="date">Date</label>
+                            <input id="date" type="date">
+                            <label for="time">Time</label>
+                            <input id="time" type="time">
+                            <div class="float-right">
+                              <input type="checkbox" id="confirmField">
+                              <label class="label-inline" for="confirmField">Send a copy to yourself</label>
+                            </div>
+                            <br/>
+                            <a href="careerquiz.html" type="submit" class="button button-outline" onclick="save()">Confirm</a>
+                        </fieldset>
+                    </form>
                 </div>
                 <div class="column column-10"></div>
             </div>
 
             <div class="row">
-
                 <div class="column column-10"></div>
                 <div class="column column-80">
-                  
+                    
                 </div>
                 <div class="column column-10"></div>
             </div>
@@ -56,4 +70,5 @@
         </section>
     </body>
 
+    <script src="js/schedule.js"></script>
 </html>
